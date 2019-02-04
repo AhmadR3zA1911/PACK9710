@@ -26,18 +26,19 @@ Order By ListPrice
 -------------------------
 --Q2
 -------------------------
-SELECT L.NAME 'Location NAME' , PC.Name as 'Cat' , SUM(PL.Quantity)/(Select Sum(Quantity) From Production.ProductInventory) as 'Percent'
-FROM Production.Location L
-inner Join Production.ProductInventory PL
-ON L.LocationID = PL.LocationID
-inner Join Production.Product P
-ON PL.ProductID= P.ProductID
-inner join Production.ProductSubcategory PS
-ON PS.ProductSubcategoryID=P.ProductSubcategoryID
-inner Join Production.ProductCategory PC
-ON PC.ProductCategoryID=PS.ProductCategoryID
+Select PL.Name 'Location Name' , PC.Name 'Cat NAME' , Format (Sum(PR.Quantity) * 100.0 / (Select Sum(Quantity) From Production.ProductInventory),'0.000') as 'Percent Quantity'
 
-Group by L.Name , PC.Name
+From Production.Location PL
+inner join Production.ProductInventory PR
+ON PL.LocationID=PR.LocationID
+Inner Join Production.Product P
+ON PR.ProductID=P.ProductID
+inner join Production.ProductSubcategory PS
+ON P.ProductSubcategoryID=PS.ProductSubcategoryID
+inner Join Production.ProductCategory PC
+on PS.ProductCategoryID=PC.ProductCategoryID
+
+Group By PL.Name , PC.Name
 
 
 -------------------------
