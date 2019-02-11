@@ -7,9 +7,7 @@
 ****************************************************************
 */
 use AdventureWorks2017
--------------------------------
---Q1
--------------------------------
+
 Select * From Sales.SalesOrderDetail
 Select * FRom Sales.SalesOrderHeader
 Select * FRom Sales.Customer
@@ -21,6 +19,24 @@ Select * From Production.Product
 Select * From INFORMATION_SCHEMA.COLUMNS Where COLUMN_NAME='CustomerID'
 
 go 
+-------------------------------
+--Q1
+-------------------------------
+Select Top 1 R.ProductName
+FROM 
+(
+Select Top 10 P.Name As 'ProductName' , PC.Name As 'CatName' , S.OrderQty , S.LineTotal 
+FROM Sales.SalesOrderDetail S
+Inner Join Production.Product P
+ON s.ProductID=P.ProductID
+Inner Join Production.ProductSubcategory PS
+ON P.ProductSubcategoryID=PS.ProductSubcategoryID
+Inner Join Production.ProductCategory PC
+ON PS.ProductCategoryID=PC.ProductCategoryID
+Order By S.LineTotal Desc
+) R
+
+
 
 -------------------------------
 --Q2
@@ -40,7 +56,7 @@ Inner Join Production.ProductCategory PC
 ON PS.ProductCategoryID=PC.ProductCategoryID
 Order By S.LineTotal Desc
 ) R
-Order By R.OrderQty
+
 
 
 -------------------------------
@@ -123,15 +139,11 @@ Where SD.LineTotal = (Select Max (LineTotal) From Sales.SalesOrderDetail)
 -------------------------------
 --Q7
 -------------------------------
-Select R.[ProductNAME] , R.CATNAME , Sum(R.SumOrder) Over (Partition By R.CATNAME order By R.[ProductNAME])
+Select R.[ProductNAME] , R.CATNAME , Format ((100.0*R.SumOrder/R.TotalQTY),'0.000')+' %' As 'Percent'
 FRom
 (
-
-Select 'TEST' as  'ProductNAME' ,'Bike' as 'CATNAME', Sum(50+45) as 'SumOrder'
-UNion
-Select P.Name as  'ProductNAME' ,PC.NAME as 'CATNAME', Sum(SD.OrderQty) as 'SumOrder' 
---,Sum(SD.OrderQty) over (Partition By PC.NAME Order by P.Name) as 'Total'
---,ROW_NUMBER() Over (Partition  By PC.NAME Order By P.NAME) as 'R0W'
+Select Top 10  P.Name as  'ProductNAME' ,PC.NAME as 'CATNAME', Sum(SD.OrderQty) as 'SumOrder' 
+,(Select sum(OrderQty) From Sales.SalesOrderDetail) as 'TotalQTY'
 From Sales.SalesOrderHeader SH
 Inner Join Sales.SalesOrderDetail SD
 ON SH.SalesOrderID=SD.SalesOrderID
@@ -142,8 +154,7 @@ ON P.ProductSubcategoryID=PS.ProductSubcategoryID
 Inner Join Production.ProductCategory PC
 ON PS.ProductCategoryID=PC.ProductCategoryID
 Group By P.Name ,PC.NAME
-Having Sum(SD.OrderQty) < 11
---Order By SumOrder
+Order By SumOrder ASC
 ) R 
-Group By R.[ProductNAME] , R.CATNAME ,R.SumOrder
+--Group By R.[ProductNAME] , R.CATNAME ,R.SumOrder
 ---Order By R0W
