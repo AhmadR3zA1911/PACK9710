@@ -10,9 +10,16 @@ namespace _08_01__CheckString
     {
         static void Main(string[] args)
         {
-            string Orginal = "palindrome";
-            Console.Write("Please Enter String For check:");
-            if (Orginal==Console.ReadLine())
+            string Orginal = "";
+            string rivers = "";
+            Console.Write("Please Enter String For Checking Palindrome:");
+            Orginal = Console.ReadLine();
+
+            for (int i = Orginal.Length-1 ; i >= 0 ; i--)
+            {
+                rivers += Orginal[i];
+            }
+            if (Orginal==rivers)
             {
                 Console.WriteLine("True");
             }
