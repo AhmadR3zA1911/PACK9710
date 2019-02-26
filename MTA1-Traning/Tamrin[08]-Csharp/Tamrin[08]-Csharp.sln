@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "[08-04]-RemoveTheParenthese
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "[08-05]-DuplicateNumber", "[08-05]-DuplicateNumber\[08-05]-DuplicateNumber.csproj", "{20BD628A-EC3A-4D72-AFE8-0C1F3155D922}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "[08-06]-CountTheFrequency", "[08-06]-CountTheFrequency\[08-06]-CountTheFrequency.csproj", "{1BC460C8-F36D-47D4-B5F7-6EBBA3BB78FA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{20BD628A-EC3A-4D72-AFE8-0C1F3155D922}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{20BD628A-EC3A-4D72-AFE8-0C1F3155D922}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{20BD628A-EC3A-4D72-AFE8-0C1F3155D922}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BC460C8-F36D-47D4-B5F7-6EBBA3BB78FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BC460C8-F36D-47D4-B5F7-6EBBA3BB78FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BC460C8-F36D-47D4-B5F7-6EBBA3BB78FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BC460C8-F36D-47D4-B5F7-6EBBA3BB78FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
