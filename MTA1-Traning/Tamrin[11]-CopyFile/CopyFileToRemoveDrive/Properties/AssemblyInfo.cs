@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("CopyFileToRemoveDrive")]
+[assembly: AssemblyTitle("Simple-Copy-File")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("CopyFileToRemoveDrive")]
+[assembly: AssemblyProduct("Simple-Copy-File")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("6d614e0c-5f39-43f3-9031-914d4f8fd0e2")]
+[assembly: Guid("76e61dfe-9363-4c39-9aaa-8bdc8be351f0")]
 
 // Version information for an assembly consists of the following four values:
 //
