@@ -1,0 +1,169 @@
+﻿body
+{
+    direction:rtl;
+    font-family:Vazir;
+}
+/*for vazir font*/
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
+{
+    font-family:Vazir,Tahoma;
+    font-weight:400;
+    
+}
+b, strong {
+    font-weight: 400;
+}
+
+/*Panel HEading*/
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+    float: left;
+}
+
+/*Menu*/
+@media (min-width: 768px) {
+  #page-wrapper {
+    position: inherit;
+    margin: 0 250px 0 0;
+    padding: 0 30px;
+    border-left: 1px solid #e7e7e7;
+  }
+}
+
+
+/*Action Buttom*/
+.pull-right {
+    float: left !important;
+}
+
+.pull-left {
+    float: right !important;
+}
+
+/*Time Line*/
+
+.timeline > li > .timeline-panel {
+  float: right;
+  position: relative;
+  width: 46%;
+  padding: 20px;
+  border: 1px solid #d4d4d4;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+}
+
+.timeline > li > .timeline-panel:before {
+
+  left: -15px;
+  right:auto; 
+  border-right: 15px solid #ccc;
+  border-left: 0px solid #ccc;
+}
+.timeline > li > .timeline-panel:after {
+  content: " ";
+  display: inline-block;
+  position: absolute;
+  top: 27px;
+  right:auto;
+  left: -14px;
+  border-top: 14px solid transparent;
+  border-right: 14px solid #fff;
+  border-bottom: 14px solid transparent;
+  border-left: 0px solid #fff;
+}
+.timeline > li.timeline-inverted > .timeline-panel {
+  float: left;
+}
+.timeline > li.timeline-inverted > .timeline-panel:before {
+  left: auto;
+  right: -15px;
+  border-right-width: 0;
+  border-left-width: 15px;
+}
+.timeline > li.timeline-inverted > .timeline-panel:after {
+  left: auto;
+  right: -14px;
+  border-right-width: 0;
+  border-left-width: 14px;
+}
+
+.timeline-body > p
+{
+    text-align:justify;
+}
+/* Chat*/
+.chat li.left .chat-body {
+  margin-left: 0px;
+  margin-right: 60px;
+}
+.chat li.right .chat-body {
+  margin-right: 0;
+  margin-left: 60px;
+}
+.chat li .chat-body p
+{
+    text-align:justify;
+}
+
+@font-face {
+    font-family:Vazir;
+    src: url('../fonts/Vazir.eot');
+    src: url('../fonts/Vazir.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Vazir.woff2') format('woff2'),
+         url('../fonts/Vazir.woff') format('woff'),
+         url('../fonts/Vazir.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family:Vazir;
+    src: url('../fonts/Vazir.Bold.eot');
+    src: url('../fonts/Vazir.Bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Vazir.Bold.woff2') format('woff2'),
+         url('../fonts/Vazir.Bold.woff') format('woff'),
+         url('../fonts/Vazir.Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family:Vazir;
+    src: url('../fonts/Vazir.Black.eot');
+    src: url('../fonts/Vazir.Black.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Vazir.Black.woff2') format('woff2'),
+         url('../fonts/Vazir.Black.woff') format('woff'),
+         url('../fonts/Vazir.Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family:Vazir;
+    src: url('../fonts/Vazir.Medium.eot');
+    src: url('../fonts/Vazir.Medium.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Vazir.Medium.woff2') format('woff2'),
+         url('../fonts/Vazir.Medium.woff') format('woff'),
+         url('../fonts/Vazir.Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family:Vazir;
+    src: url('../fonts/Vazir.Light.eot');
+    src: url('../fonts/Vazir.Light.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Vazir.Light.woff2') format('woff2'),
+         url('../fonts/Vazir.Light.woff') format('woff'),
+         url('../fonts/Vazir.Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family:Vazir ;
+    src: url('../fonts/Vazir.Thin.eot');
+    src: url('../fonts/Vazir.Thin.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Vazir.Thin.woff2') format('woff2'),
+         url('../fonts/Vazir.Thin.woff') format('woff'),
+         url('../fonts/Vazir.Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+
