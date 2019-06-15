@@ -257,6 +257,7 @@
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Admin\GetAllUser.cshtml" />
     <Content Include="Views\Admin\GetAllRole.cshtml" />
+    <Content Include="Views\Admin\CrateUser.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -48,5 +48,11 @@ namespace SaleTicket.Controllers
             var roles = db.Roles.ToList();
             return PartialView(roles);
         }
+
+
+        public ActionResult CrateUser()
+        {
+            return PartialView();
+        }
     }
 }
